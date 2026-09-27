@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+
+{% block title %}
+Party Planner
+{% endblock %}
+
+
+{% block content %}
+
+<div class="planner">
+
+    <h1>
+        🎉 Party Budget Planner
+    </h1>
+
+    <p>
+        Plan a party around your
+        guest count and budget.
+    </p>
+
+
+    <form
+        id="partyForm"
+        class="form"
+    >
+
+        <div class="two">
+
+            <label>
+
+                Budget (₹)
+
+                <input
+                    id="budget"
+                    type="number"
+                    min="1"
+                    required
+                >
+
+            </label>
+
+
+            <label>
+
+                Guests
+
+                <input
+                    id="guests"
+                    type="number"
+                    min="1"
+                    value="15"
+                    required
+                >
+
+            </label>
+
+        </div>
+
+
+        <label>
+
+            Event Type
+
+            <input
+                id="event_type"
+                value="Birthday"
+            >
+
+        </label>
+
+
+        <label>
+
+            Food Preference
+
+            <input
+                id="food_preference"
+                placeholder="Vegetarian / mixed / snacks"
+            >
+
+        </label>
+
+
+        <label>
+
+            Venue Preference
+
+            <input
+                id="venue_preference"
+                placeholder="Home / hall / outdoor"
+            >
+
+        </label>
+
+
+        <label>
+
+            Other Preferences
+
+            <textarea
+                id="preferences"
+            ></textarea>
+
+        </label>
+
+
+        <button
+            class="btn"
+            type="submit"
+        >
+            Generate Plan
+        </button>
+
+    </form>
+
+
+    <div
+        id="result"
+        class="result"
+    ></div>
+
+</div>
+
+{% endblock %}

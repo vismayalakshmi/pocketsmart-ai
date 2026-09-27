@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+
+{% block title %}
+Dashboard
+{% endblock %}
+
+
+{% block content %}
+
+<div class="page-head">
+
+    <div>
+
+        <span class="eyebrow">
+            DASHBOARD
+        </span>
+
+        <h1>
+            Hello,
+            {{ user["username"] }}
+            👋
+        </h1>
+
+        <p>
+            Choose a planner and let
+            PocketSmart AI build a budget.
+        </p>
+
+    </div>
+
+</div>
+
+
+<div class="card-grid">
+
+    <div class="card module">
+
+        <h2>
+            🏠 Home Interior
+        </h2>
+
+        <p>
+            Lighting, fans, furniture
+            and room-level planning.
+        </p>
+
+        <a
+            class="btn"
+            href="/home-planner"
+        >
+            Open Planner
+        </a>
+
+    </div>
+
+
+    <div class="card module">
+
+        <h2>
+            🎉 Party Budget
+        </h2>
+
+        <p>
+            Guest-based planning for
+            food, venue and decoration.
+        </p>
+
+        <a
+            class="btn"
+            href="/party-planner"
+        >
+            Open Planner
+        </a>
+
+    </div>
+
+
+    <div class="card module">
+
+        <h2>
+            💎 Jewelry Styling
+        </h2>
+
+        <p>
+            Use an outfit image for
+            multimodal matching ideas.
+        </p>
+
+        <a
+            class="btn"
+            href="/jewelry-planner"
+        >
+            Open Planner
+        </a>
+
+    </div>
+
+</div>
+
+{% endblock %}

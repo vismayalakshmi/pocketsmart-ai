@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}
+Recommendation Details
+{% endblock %}
+
+
+{% block content %}
+
+<h1>
+    {{ item["plan_type"] }}
+</h1>
+
+
+<p>
+    {{ item["created_at"] }}
+
+    ·
+
+    Budget:
+    ₹{{ "%.2f"|format(item["budget"] or 0) }}
+</p>
+
+
+<div class="result">
+
+    <pre>{{ result | tojson(indent=2) }}</pre>
+
+</div>
+
+{% endblock %}

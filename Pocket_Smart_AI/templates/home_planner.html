@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+
+{% block title %}
+Home Planner
+{% endblock %}
+
+
+{% block content %}
+
+<div class="planner">
+
+    <h1>
+        🏠 Home Interior Planner
+    </h1>
+
+    <p>
+        Enter your requirements.
+        Currency is INR.
+    </p>
+
+
+    <form
+        id="homeForm"
+        class="form"
+    >
+
+        <div class="two">
+
+            <label>
+
+                Budget (₹)
+
+                <input
+                    id="budget"
+                    type="number"
+                    min="1"
+                    required
+                >
+
+            </label>
+
+
+            <label>
+
+                Lights
+
+                <input
+                    id="lights"
+                    type="number"
+                    min="0"
+                    value="2"
+                >
+
+            </label>
+
+        </div>
+
+
+        <div class="two">
+
+            <label>
+
+                Fans
+
+                <input
+                    id="fans"
+                    type="number"
+                    min="0"
+                    value="2"
+                >
+
+            </label>
+
+
+            <label>
+
+                Furniture Pieces
+
+                <input
+                    id="furniture"
+                    type="number"
+                    min="0"
+                    value="3"
+                >
+
+            </label>
+
+        </div>
+
+
+        <label>
+
+            Rooms
+
+            <input
+                id="rooms"
+                placeholder="Living room, bedroom"
+            >
+
+        </label>
+
+
+        <label>
+
+            Preferences
+
+            <textarea
+                id="preferences"
+                placeholder="Modern, warm lighting, minimal furniture"
+            ></textarea>
+
+        </label>
+
+
+        <button
+            class="btn"
+            type="submit"
+        >
+            Generate Plan
+        </button>
+
+    </form>
+
+
+    <div
+        id="result"
+        class="result"
+    ></div>
+
+</div>
+
+{% endblock %}
