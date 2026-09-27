@@ -1,7 +1,7 @@
 from fastapi import Request
 from pwdlib import PasswordHash
 
-from db import get_user_by_id
+from app.db import get_user_by_id
 
 
 password_hash = PasswordHash.recommended()

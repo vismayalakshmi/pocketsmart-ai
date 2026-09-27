@@ -1,7 +1,7 @@
 import sqlite3
 from contextlib import contextmanager
 
-from .config import settings
+from app.config import settings
 
 
 def connect():
