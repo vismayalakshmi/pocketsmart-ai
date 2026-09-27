@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}
+History
+{% endblock %}
+
+
+{% block content %}
+
+<h1>
+    Recommendation History
+</h1>
+
+
+{% if history %}
+
+<div class="history-list">
+
+    {% for h in history %}
+
+    <a
+        class="history-item"
+        href="/recommendations-details/{{ h['id'] }}"
+    >
+
+        <strong>
+            {{ h["plan_type"] }}
+        </strong>
+
+        <span>
+            ₹{{ "%.2f"|format(h["budget"] or 0) }}
+        </span>
+
+        <small>
+            {{ h["created_at"] }}
+        </small>
+
+    </a>
+
+    {% endfor %}
+
+</div>
+
+
+{% else %}
+
+<div class="card">
+
+    <p>
+        No plans yet.
+        Create your first plan
+        from the dashboard.
+    </p>
+
+</div>
+
+{% endif %}
+
+{% endblock %}
