@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block title %}
+Jewelry Planner
+{% endblock %}
+
+
+{% block content %}
+
+<div class="planner">
+
+    <h1>
+        💎 Jewelry & Outfit Planner
+    </h1>
+
+    <p>
+        Upload an outfit photo and
+        receive AI-assisted styling
+        suggestions.
+    </p>
+
+
+    <form
+        id="jewelryForm"
+        class="form"
+        enctype="multipart/form-data"
+    >
+
+        <label>
+
+            Budget (₹)
+
+            <input
+                name="budget"
+                type="number"
+                min="1"
+                required
+            >
+
+        </label>
+
+
+        <label>
+
+            Preferences
+
+            <textarea
+                name="preferences"
+                placeholder="Simple, traditional, silver-tone, etc."
+            ></textarea>
+
+        </label>
+
+
+        <label>
+
+            Outfit Image
+
+            <input
+                name="image"
+                type="file"
+                accept="image/jpeg,image/png,image/webp"
+                required
+            >
+
+        </label>
+
+
+        <button
+            class="btn"
+            type="submit"
+        >
+            Analyze Outfit
+        </button>
+
+    </form>
+
+
+    <div
+        id="result"
+        class="result"
+    ></div>
+
+</div>
+
+{% endblock %}
